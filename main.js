@@ -13,9 +13,9 @@ function setup() {
 
   function draw() {
     draw_net();
+    pl1.move(i%10,i%10);
+    pl1.scale_k(1 + i % 10);
     pl1.draw();
-    pl1.move(i%10,i%10)
-    pl1.scale(i % 10);
     i++;
   }
 
