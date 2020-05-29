@@ -1,4 +1,4 @@
-class player{
+class object{
     constructor(){
 
         this.position_x = 0;
@@ -13,11 +13,15 @@ class player{
         this.position_x += x * 50;
         this.position_y += y * 50;
     }
+    move_to(x,y){
+        this.position_x = x * 50;
+        this.position_y = y * 50;
+    }
     scale_k(k ){
         this.scale_factor *= k;
     }
     draw(){
-        scale(this.scale_factor);
+        //scale(this.scale_factor);
         image(this.asset,this.position_x,this.position_y);
         //scale(1/this.scale);
     }
