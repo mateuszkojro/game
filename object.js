@@ -4,6 +4,7 @@ class object{
         this.position_x = 0;
         this.position_y = 0;
         this.scale_factor = 1;
+        this.transpa
 
     }
 
@@ -33,4 +34,5 @@ class object{
         image(this.asset,this.position_x,this.position_y);
         //scale(1/this.scale);
     }
+
 }
