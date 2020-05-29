@@ -1,24 +1,28 @@
 //const { FILL } = require("./p5");
-let img;
+
+let pl1 = new player();
+let i = 0;
 function setup() {
   createCanvas(1366, 768);
   background(51);
   frameRate(60);
   rectMode(CENTER);
-  img = loadImage("/assets/hero.png")
+  pl1.init("/assets/hero.png");
   }
-  let i =0;
+
+
   function draw() {
+    draw_net();
+    pl1.draw();
+    pl1.move(i%10,i%10)
+    pl1.scale(i % 10);
+    i++;
+  }
+
+  function draw_net(){
     for (let i = 50; i < windowWidth; i += 50){
       stroke(255,0,0);
       line(i, 0, i, windowHeight);
+      line(0,i,windowWidth,i );
     }
-    image(img,width/2,height/2);
-    rotate(i)
-    rect(0, 0, 100, 100);
-    rotate(CENTER)
-    rotate(360+i)
-    rect(500, 500, 100, 100);
-
-    i++;
   }
