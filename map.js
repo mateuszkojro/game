@@ -1,10 +1,17 @@
 class map {
 
     constructor(x, y){
-        this.map = [];
+		this.map = [];
+		this.cell_map = [];
         this.size_x = x;
         this.size_y = y;
-    }
+	}
+	
+	init(){
+		for (let i = 0; i < this.size_x* this.size_y; i++){
+			this.cell_map[i] = new cell;
+		}
+	}
 
     set(x,y,value){
         //czy w zakresie
