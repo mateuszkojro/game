@@ -16,6 +16,22 @@ class object{
         console.log(this.position_x, this.position_y);
     }
 
+    animation_move(x, y){
+        let rel_x = this.position_x + x * 50;
+        let rel_y = this.position_y + y * 50;
+        if (rel_x <= width - 50 && rel_x >= 0){//this.position_x = rel_x;
+            for (let i = 1; i <= 50; i++){
+                this.position_x = this.position_x + (x * 1);
+            }
+        }
+        if (rel_y <= height - 50 && rel_y >= 0){
+            for (let i = 1; i <= 50; i++){
+                this.position_y = this.position_y + (y * 1);
+            }
+        }
+        console.log(this.position_x, this.position_y);
+    }
+
     init(_asset_path){
         this.asset = loadImage(_asset_path);
     }
