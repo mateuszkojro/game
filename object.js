@@ -10,7 +10,7 @@ class object{
 
     move(x, y){
         let rel_x = this.position_x + x * 50;
-        let rel_y = this.position_y + y * 50
+        let rel_y = this.position_y + y * 50;
         if (rel_x <= width - 50 && rel_x >= 0){this.position_x = rel_x;}
         if (rel_y <= height - 50 && rel_y >= 0){this.position_y = rel_y;}
         console.log(this.position_x, this.position_y);
@@ -20,8 +20,13 @@ class object{
         this.asset = loadImage(_asset_path);
     }
     move_to(x,y){
-        if (x <= width && x >= 0){this.position_x = x * 50;}
+        if (x <= width && x >= 0){ this.position_x = x * 50;}
         if (y <= height && y >= 0){this.position_y = y * 50;}
+    }
+    check_position(x,y,in_map){
+        let rel_x = this.position_x + x * 50;
+        let rel_y = this.position_y + y * 50;
+        return in_map.is_free(rel_x,rel_y)
     }
     scale_by(k ){
         this.scale_factor *= k;
@@ -34,5 +39,4 @@ class object{
         image(this.asset,this.position_x,this.position_y);
         //scale(1/this.scale);
     }
-
 }

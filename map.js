@@ -13,7 +13,10 @@ class map {
     get(x,y){
         //czy w zakresie
         return this.map[y*this.size_x + x];
-    }
+	}
+	is_free(x,y){
+		if (this.map[y*this.size_x + x][2] == '0') {return true}
+	}
     load(arr){
         //czy rozmiary sie zgadzaja
         for (let i = 0 ; i < arr.length && this.size_x   ; i++){
