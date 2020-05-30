@@ -26,7 +26,7 @@ function setup() {
     background(51);
     //draw_grass();
     map1.draw_map();
-    draw_net();
+    
     drzewo.move_to(12,11);
     dom.move_to(5,10)
     drzewo.draw();
@@ -37,6 +37,7 @@ function setup() {
     dirt.move_to(2,1);
     dirt.draw();
     pl1.draw();
+    draw_net();
 
     i++;
   }
