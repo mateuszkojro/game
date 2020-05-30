@@ -1,3 +1,7 @@
+# ENGINE
+
+* ~~kolizje~~ `gotowe`
+
 # GRAPHICS
 
 * wstawic klatki animacji pomiedzy kolejnymi polami
@@ -6,3 +10,4 @@
 
 * logowanie
 * zapisywanie progresu 
+ 

@@ -15,7 +15,8 @@ class map {
         return this.map[y*this.size_x + x];
 	}
 	is_free(x,y){
-		if (this.map[y*this.size_x + x][2] == '0') {return true}
+		if (this.map[(y/50)*this.size_x + (x/50)][2] == '0') {return true;}
+		else {return false;}
 	}
     load(arr){
         //czy rozmiary sie zgadzaja
@@ -64,7 +65,6 @@ class map {
 
 ladowanie danych z tablicy
 jaki rodzaj pola w jakim miejscu
-
 
 this.map.push("123")
 

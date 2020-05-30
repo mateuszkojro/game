@@ -31,12 +31,15 @@ class object{
     scale_by(k ){
         this.scale_factor *= k;
     }
+    scale_to(k ){
+        this.scale_factor = k;
+    }
     resize_to(size_x , size_y){
             // resize to excact size
     }
     draw(){
-        //scale(this.scale_factor);
+        scale(this.scale_factor);
         image(this.asset,this.position_x,this.position_y);
-        //scale(1/this.scale);
+        scale(1/this.scale_factor);
     }
 }
