@@ -45,6 +45,8 @@ function setup() {
 
   function draw() {
     background(51);
+    
+    pl1.animation();
     //draw_grass();
     map1.draw_map();
     /*
