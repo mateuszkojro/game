@@ -14,12 +14,15 @@ class map {
 	}
 
     set(x,y,value){
-        //czy w zakresie
-        this.map[y*this.size_x + x] = value;
+		//czy w zakresie
+		if ((x >= this.size_x || x < 0) || (y >= this.size_y || y < 0 )){console.error("map::set() map array out of bounds");}
+		else{this.map[y*this.size_x + x] = value;}
+        
     }
     get(x,y){
-        //czy w zakresie
-        return this.map[y*this.size_x + x];
+		//czy w zakresie
+		if ((x >= this.size_x || x < 0) || (y >= this.size_y || y < 0 )){console.error("map::get() map array out of bounds");}
+		else{return this.map[y*this.size_x + x];}
 	}
 	is_free(x,y){
 		if (this.map[(y/50)*this.size_x + (x/50)][2] == '0') {return true;}
