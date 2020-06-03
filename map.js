@@ -13,7 +13,6 @@ class map {
 	}
 
 	set(x, y, value) {
-		//czy w zakresie
 		if (x >= this.size_x || x < 0 || y >= this.size_y || y < 0) {
 			console.error("map::set() map array out of bounds");
 		} else {
@@ -21,7 +20,6 @@ class map {
 		}
 	}
 	get(x, y) {
-		//czy w zakresie
 		if (x >= this.size_x || x < 0 || y >= this.size_y || y < 0) {
 			console.error("map::get() map array out of bounds");
 		} else {
@@ -29,17 +27,26 @@ class map {
 		}
 	}
 	is_free(x, y) {
-		if (this.map[(y / 50) * this.size_x + x / 50][2] == "0") {
-			return true;
+		if (x >= this.size_x || x < 0 || y >= this.size_y || y < 0) {
+			console.error("map::is_free() map array out of bounds");
 		} else {
-			return false;
+			if (this.map[(y / 50) * this.size_x + x / 50][2] == "0") {
+				return true;
+			} else {
+				return false;
+			}
 		}
 	}
 	load(arr) {
-		//czy rozmiary sie zgadzaja
+		// Kopiujemy caly obiekt
+		this.map = arr;
+		/*
+		// Albo kopiujac kazdy element jeden po drogim 
+
 		for (let i = 0; i < arr.length && this.size_x; i++) {
 			this.map = arr[i];
 		}
+		*/
 	}
 	draw_map() {
 		//console.log("i am drawing a map")

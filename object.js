@@ -15,10 +15,16 @@ class object {
 		let rel_y = this.position_y + y * 50;
 		if (rel_x <= width - 50 && rel_x >= 0) {
 			this.position_x = rel_x;
-		}
+        }
+        else{
+            console.error("object::move x value out of bounds");
+        }
 		if (rel_y <= height - 50 && rel_y >= 0) {
 			this.position_y = rel_y;
-		}
+        }
+        else{
+            console.error("object::move y value out of bounds");
+        }
 		console.log(this.position_x, this.position_y);
 	}
 
