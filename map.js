@@ -27,15 +27,11 @@ class map {
 		}
 	}
 	is_free(x, y) {
-		if (x >= this.size_x || x < 0 || y >= this.size_y || y < 0) {
-			console.error("map::is_free() map array out of bounds");
-		} else {
 			if (this.map[(y / 50) * this.size_x + x / 50][2] == "0") {
 				return true;
 			} else {
 				return false;
 			}
-		}
 	}
 	load(arr) {
 		// Kopiujemy caly obiekt
