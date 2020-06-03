@@ -21,4 +21,5 @@ class cell{
 	drop(item){
 		this.items[this.items.length] = item;
 	}
+	
 }
