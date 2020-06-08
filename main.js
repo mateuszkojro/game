@@ -55,9 +55,9 @@ function setup() {
     drzewo.draw();
     dom.draw();
     dirt.draw();
-    dirt.move_to(1,1);
+    dirt.move_to(1,);1);
     dirt.draw();
-    dirt.move_to(2,1);
+    dirt.move_to(2,1
     dirt.draw();
     */
     
