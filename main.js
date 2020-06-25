@@ -6,7 +6,7 @@ let dom = new object();
 let dirt = new object();
 let grass = new object();
 let i = 0;
-
+var audio = new Audio("assets/pianinko.mp3");
 
 let map1  = new map(15,15);
 map1.map = [
@@ -32,7 +32,7 @@ function setup() {
   frameRate(60);
   rectMode(CENTER);
 
-  pl1.init("assets/hero2.png");
+  pl1.init("assets/enemy.png");
   drzewo.init('assets/drzewo2.png');
   dom.init('assets/house.png');
   grass.init("assets/grass.png");
@@ -44,6 +44,7 @@ function setup() {
   }
 
   function draw() {
+    audio.play();
     background(51);
     
     //pl1.animation();
