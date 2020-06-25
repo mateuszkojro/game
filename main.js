@@ -32,7 +32,7 @@ function setup() {
   frameRate(60);
   rectMode(CENTER);
 
-  pl1.init("assets/hero.png");
+  pl1.init("assets/hero2.png");
   drzewo.init('assets/drzewo2.png');
   dom.init('assets/house.png');
   grass.init("assets/grass.png");
@@ -70,7 +70,7 @@ function setup() {
   function draw_net(){
     for (let i = 50; i < width; i += 50){
       stroke(255,0,0);
-      strokeWeight(2);
+      strokeWeight(1);
       line(i, 0, i, height);
       line(0,i,width,i );
     }
